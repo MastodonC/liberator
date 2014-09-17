@@ -8,7 +8,7 @@
   (if (or (fn? x) (keyword? x)) x (constantly x)))
 
 (defn apply-if-function [function-or-value request]
-  (if (fn? function-or-value)
+  (if (ifn? function-or-value)
     (function-or-value request)
     function-or-value))
 
